@@ -1,0 +1,30 @@
+<h2 mat-dialog-title>DODAJ KAPŁANA</h2>
+
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field>
+      <input matInput  placeholder="Imię" [(ngModel)]="priest.name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  placeholder="Email" [(ngModel)]="priest.name">
+    </mat-form-field>
+
+
+    <!-- <mat-form-field>
+
+      <input matInput [matDatepicker]="myDatepicker"
+             formControlName="releasedAt">
+
+      <mat-datepicker-toggle matSuffix
+                             [for]="myDatepicker">
+
+      </mat-datepicker-toggle>
+
+      <mat-datepicker #myDatepicker></mat-datepicker>
+
+  </mat-form-field> -->
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button (click)="cancel()">Anuluj</button>
+  <button mat-raised-button mat-primary (click)="submit()">Dodaj</button>
+</mat-dialog-actions>

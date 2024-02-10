@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ustawia elementy w kolumnie (tytuł nad przyciskami) */
+    height: 100vh; /* Ustawia kontener na całą wysokość ekranu */
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Dodatkowy margines nad przyciskami */
+  }
+  
+  button {
+    width: 250px;
+    height: 250px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-right: 10px;
+  }
+  

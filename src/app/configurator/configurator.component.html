@@ -1,0 +1,52 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Konfigurator Parafii</h1>
+
+
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+        <div class="form-group">
+          <label for="name">Nazwa Parafii:</label>
+          <input type="text" class="form-control" id="name" name="name" [(ngModel)]="parish.name" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Adres:</label>
+          <input type="text" class="form-control" id="address" name="address" [(ngModel)]="parish.address" required>
+        </div>
+        
+        <button type="button" class="add_button" mat-raised-button (click)="openFormDialog()">DODAJ KAPŁANA</button>
+        <button type="button" class="add_button">DODAJ MIEJSCE</button>
+        <button type="button" class="add_button">DODAJ TERMINY MSZY ŚW.</button>
+        <button style="display: block;" type="submit" class="create_button" [disabled]="!myForm.form.valid">UTWÓRZ PARAFIĘ</button>
+
+
+        <div id="elements" >
+          <div id="element">
+            <label for="priests">Kapłani:</label>
+            <ul class="heroes">
+              <li *ngFor="let priest of priests">
+                <button [class.selected]="priest === selectedPriest" type="button" (click)="onSelect(priest)">
+                  <span class="badge">1</span>
+                  <span class="name">{{priest.name}}</span>
+                </button>
+              </li>
+            </ul>
+            
+            <div *ngIf="selectedPriest">
+              <h2>{{selectedPriest.name | uppercase}} Details</h2>
+              <div>id: 1</div>
+              <div>
+                <label for="priest-name">Hero name: </label>
+                <input id="priest-name" [(ngModel)]="selectedPriest.name" placeholder="name">
+              </div>
+            </div>
+          </div>
+          <div id="element">
+            <label for="places">Miejsca:</label>
+          </div>
+          <div id="element">
+            <label for="masses">Msze Święte:</label>
+          </div>
+          
+        </div>
+    </form>
+  

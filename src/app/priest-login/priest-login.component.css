@@ -1,0 +1,28 @@
+/* login.component.css */
+form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+  
+div {
+    margin-bottom: 10px;
+}
+  
+  label {
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.contener {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Opcjonalnie, aby wypośrodkować w pionie na całej wysokości okna */
+}
+  
