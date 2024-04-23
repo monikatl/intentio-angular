@@ -4,7 +4,7 @@ import {Parish} from './parish'
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { AddPriestComponent } from '../add-priest/add-priest.component';
 import { Priest } from '../priest';
-import { ConfigService } from '../config/config.service';
+import { ConfigService } from '../services/config.service';
 import { emit } from 'node:process';
 
 @Component({

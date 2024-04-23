@@ -11,13 +11,12 @@ import { AppComponent } from './app.component';
 import { MassComponent } from './mass/mass.component';
 import { ConfiguratorComponent } from './configurator/configurator.component';
 import { AddPriestComponent } from './add-priest/add-priest.component';
-import { ConfigService } from './config/config.service';
+import { ConfigService } from './services/config.service';
 import { StartScreenComponent } from './start-screen/start-screen.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { PriestLoginComponent } from './priest-login/priest-login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
-import { IntentionsListComponent } from './intentions-list/intentions-list.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { FooterComponent } from './footer/footer.component';
 
@@ -33,7 +32,6 @@ import { FooterComponent } from './footer/footer.component';
     UserLoginComponent,
     PriestLoginComponent,
     MainComponent,
-    IntentionsListComponent,
     TopMenuComponent,
     FooterComponent
   ],

@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { IntentionServiceService } from './intention-service.service';
+import { IntentionServiceService } from './services/intention-service.service';
 
 describe('IntentionServiceService', () => {
   let service: IntentionServiceService;
