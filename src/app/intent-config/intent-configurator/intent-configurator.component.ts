@@ -5,6 +5,8 @@ import { DataService } from '../../services/data-service';
 import { Header } from '../../../Header';
 import { ContentType } from '../../ContentType';
 import { IntentionConfiguratorState, State } from '../configurator-state';
+import { MatDialog } from '@angular/material/dialog';
+import { EndDialogComponent } from '../../end-dialog/end-dialog.component';
 
 @Component({
   selector: 'app-intent-configurator',
@@ -16,11 +18,12 @@ export class IntentConfiguratorComponent {
 
   intention: Intention = new Intention();
   header: Header = new Header(ContentType.THANKSGIVING, "");
+  nextButtonText: string = "DALEJ"
 
   configState: IntentionConfiguratorState = new IntentionConfiguratorState()
   state = State
 
-  constructor(private router: Router, private dataService: DataService) {}
+  constructor(private router: Router, private dataService: DataService, private dialog: MatDialog) {}
 
   ngOnInit() {
     this.dataService.previewData$.subscribe(data => {
@@ -62,8 +65,13 @@ export class IntentConfiguratorComponent {
 
 
   next(): void {
-    this.configState.next();
-    this.navigate();
+    if(this.configState.current != State.SUMMARY) {
+      this.configState.next();
+      this.navigate();
+    } else {
+      this.openEndDialog()
+    }
+    
   }
 
   back(): void {
@@ -84,5 +92,20 @@ export class IntentConfiguratorComponent {
     const dataToSend =  this.intention;
     console.log(this.intention.place)
     this.dataService.updateIntention(dataToSend);
+  }
+
+  openEndDialog(): void {
+    const dialogRef = this.dialog.open(EndDialogComponent, {
+      width: '250px',
+      data: { message: 'Wiadomość do wyświetlenia w dialogu' }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('Dialog został zamknięty');
+    });
+  }
+
+  escConfig() {
+    this.router.navigate(['/main'])
   }
 }

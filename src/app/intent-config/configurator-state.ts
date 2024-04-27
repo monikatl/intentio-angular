@@ -4,20 +4,20 @@ export class IntentionConfiguratorState {
 
 
     next() {
-        if(this.current === State.PLACE) {
-            this.current = State.TYPE
-        }
-        if(this.current === State.TYPE) {
-            this.current = State.DATE
-        }
-        if(this.current === State.DATE) {
-            this.current = State.CONTENT
-        }
-        if(this.current === State.CONTENT) {
-            this.current = State.SUMMARY
-        }
-        if(this.current === State.SUMMARY) {
-            this.current = State.PAY
+        switch(this.current) {
+            case State.PLACE:
+                this.current = State.TYPE;
+                break;
+            case State.TYPE:
+                this.current = State.DATE;
+                break;
+            case State.DATE:
+                this.current = State.CONTENT
+                break;
+            case State.CONTENT:
+                this.current = State.SUMMARY
+                break;
+            case State.SUMMARY:
         }
     }
 
@@ -34,9 +34,6 @@ export class IntentionConfiguratorState {
         }
         if(this.current === State.SUMMARY) {
             this.current = State.CONTENT
-        }
-        if(this.current === State.PAY) {
-            this.current = State.SUMMARY
         }
     }
 }

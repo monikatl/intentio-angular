@@ -20,8 +20,8 @@
         </div>
             
         <div id="navigation">
-            <button class="navigation_button" (click)="back()">BACK</button>
-            <button class="navigation_button" (click)="next()">NEXT</button>
+            <button class="navigation_button" (click)="back()">WRÓĆ</button>
+            <button class="navigation_button" (click)="next()">DALEJ</button>
         </div>
     </div>
 
@@ -38,6 +38,7 @@
             <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">od {{ intention.from }}</p>
             <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">(z okazji / w 10 rocznicę)</p>
         </div>
+        <button (click)="escConfig()">Anuluj</button>
     </div>
 
 </div>

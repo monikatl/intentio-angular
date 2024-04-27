@@ -3,7 +3,6 @@ import { State } from '../configurator-state';
 import { DataService } from '../../services/data-service';
 import { Router } from '@angular/router';
 import { Intention } from '../../intention';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-summary-5',
@@ -14,9 +13,9 @@ export class Summary5Component implements OnInit{
 
   state = State
   intent: Intention = new Intention();
-  private intentSubscription!: Subscription;
 
   constructor(private router: Router, private dataService: DataService) {}
+
 
   ngOnInit(): void {
     this.intent = this.dataService.getIntention()
@@ -31,4 +30,5 @@ export class Summary5Component implements OnInit{
     const dataToSend =  state
     this.dataService.updateState(dataToSend);
   }
+  
 }
