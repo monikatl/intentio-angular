@@ -6,6 +6,7 @@ import { AddPriestComponent } from '../add-priest/add-priest.component';
 import { Priest } from '../priest';
 import { ConfigService } from '../services/config.service';
 import { emit } from 'node:process';
+import { AddScheduleMassComponent } from '../add-schedule-mass/add-schedule-mass.component';
 
 @Component({
   selector: 'app-configurator',
@@ -18,9 +19,9 @@ export class ConfiguratorComponent implements OnInit {
 
   parish!: Parish; 
   priests: Priest[] = [
-    { name: 'Dr. Nice', email: '' },
-  { name: 'Bombasto', email: '' },
-  { name: 'Celeritas', email: '' }
+    // { name: 'Dr. Nice', email: '' },
+    // { name: 'Bombasto', email: '' },
+    // { name: 'Celeritas', email: '' }
   ];
 
   constructor(private dialog: MatDialog, private service: ConfigService){}
@@ -33,7 +34,7 @@ export class ConfiguratorComponent implements OnInit {
 
   submitted = false;
 
-  openFormDialog() {
+  openAddPriestFormDialog() {
     const dialogConfig = new MatDialogConfig();
 
         dialogConfig.disableClose = true;
@@ -50,6 +51,30 @@ export class ConfiguratorComponent implements OnInit {
       };
 
       const ref = this.dialog.open(AddPriestComponent, dialogConfig);
+
+      ref.afterClosed().subscribe((result: Priest) => {
+          this.addPriest(result)
+      });
+        
+  }
+
+  openAddMassFormDialog() {
+    const dialogConfig = new MatDialogConfig();
+
+        dialogConfig.disableClose = true;
+        dialogConfig.width = '350px';
+        dialogConfig.height = '300px';
+
+        // dialogConfig.data = {
+        //   userData: userData // Przekazujemy dane użytkownika
+        // };
+
+        dialogConfig.position = {
+          top: '5%',
+          left: '5%'
+      };
+
+      const ref = this.dialog.open(AddScheduleMassComponent, dialogConfig);
 
       ref.afterClosed().subscribe((result: Priest) => {
           this.addPriest(result)

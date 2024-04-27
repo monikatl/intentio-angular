@@ -1,0 +1,96 @@
+.headers {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+  }
+  
+  .headers li {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .headers li:hover {
+    left: .1em;
+  }
+  
+  .headers a {
+    color: #333;
+    text-decoration: none;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+  }
+  
+  .headers a:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+  }
+  
+  .headers a:active {
+    background-color: #525252;
+    color: #fafafa;
+  }
+  
+  .headers .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: #405061;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    min-width: 16px;
+    text-align: right;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border: 1px solid #e0c2c0;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 16px;
+}
+
+p {
+    margin-top: 16px;
+}
+
+button {
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color:#d0cac6 ;
+}
+
+.type {
+  flex-direction: row;
+}
+
+button:hover {
+    cursor:cell;
+    background-color: #dbb0a0;
+}
+

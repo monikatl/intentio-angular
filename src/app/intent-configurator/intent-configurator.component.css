@@ -1,0 +1,105 @@
+header {
+  display: flex;
+  width: 100%;
+  background-color: #57394a;
+  height: 60px;
+}
+
+h1 {
+  padding: 16px;
+  color: whitesmoke;
+}
+
+
+.brand-logo {
+  margin: 16px;
+}
+
+nav a {
+    padding: 1rem;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+    background-color: #3D452E;
+    color: white;
+    border-radius: 25px;
+  }
+  nav a:hover {
+    color: white;
+    background-color: #42545C;
+  }
+  nav a.active {
+    background-color: black;
+  }
+
+  .navigation_button {
+    height: 30px;
+    border-radius: 10%;
+    margin: 4px;
+    border: none;
+    font-size: 16px;
+    color: aliceblue;
+    background-color: #57394a;
+   
+  }
+
+  .navigation_button:hover {
+    background-color: #dbb0a0;
+
+  }
+
+  #main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
+
+  #configurator {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
+
+ nav {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  #content {
+    flex: 2;
+  }
+
+  #navigation {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #preview {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  #preview > h2 {
+    padding: 16px;
+  }
+
+.intent-preview {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+  margin-left: 40px;
+  padding: 8px;
+  border: 2px solid #3D452E;
+  border-radius: 4px;
+}
+

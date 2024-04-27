@@ -1,0 +1,46 @@
+<div class="main">
+
+    <div class="type">
+
+        <button type="button" (click)="getHeaders(contentType.THANKSGIVING)">DZIĘKCZYNNA</button>
+        <button type="button" (click)="getHeaders(contentType.SUPPLICATORY)">BŁAGALNA</button>
+        <button type="button" (click)="getHeaders(contentType.THANKSGIVING_SUPPLICATORY)">DZIĘKCZYNNO-BŁAGALNA</button>
+        <button type="button" (click)="getHeaders(contentType.FOR_THE_DEATH)">ZA ZMARŁYCH</button>
+
+    </div>
+
+    <ul class="headers">
+        <li *ngFor="let header of headers">
+           <button type="button" (click)="setIntentionHeader(header)"> {{header.content}} </button>
+        </li>
+    </ul>
+
+    <form [formGroup]="personForm">
+        <label for="for">DLA: </label>
+        <input id="for" type="text" formControlName="for" (input)="onForInputChange()">
+      
+        <label for="from">OD: </label>
+        <input id="from" type="text" formControlName="from" (input)="onFromInputChange()">
+    </form>
+
+
+    <p><mat-slide-toggle labelPosition="before">w rocznicę</mat-slide-toggle></p>
+    <div id="anniversaryContainer">
+
+    </div>
+    <p><mat-slide-toggle labelPosition="before">z okazji</mat-slide-toggle></p>
+    <div id="occasionContainer">
+
+        <mat-form-field>
+            <mat-label>Wybierz okazję intencji</mat-label>
+            <mat-select>
+                @for (occasion of occasions; track occasion) {
+                    <mat-option [value]="occasion.name">{{ occasion.name }}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+        
+    </div>
+      
+       
+</div>

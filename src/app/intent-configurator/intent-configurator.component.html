@@ -1,0 +1,43 @@
+<header class="brand-name">
+      <img class="brand-logo" src="/assets/document-config-svgrepo-com.svg" alt="logo" aria-hidden="true">
+      <h1>Konfigurator Intencji</h1>
+</header>
+<div id="main">
+    <div id="configurator">
+        <div id="stepper">
+            <nav>
+                <a routerLink="/place">1</a>
+                <a routerLink="/type">2</a>
+                <a routerLink="/date">3</a>
+                <a routerLink="/content">4</a>
+                <a routerLink="/general">5</a>
+                <a routerLink="/pay">6</a>
+            </nav>
+        </div>
+
+        <div id="content">
+            <router-outlet></router-outlet>
+        </div>
+            
+        <div id="navigation">
+            <button class="navigation_button" (click)="back()">BACK</button>
+            <button class="navigation_button" (click)="next()">NEXT</button>
+        </div>
+    </div>
+
+    <hr/>
+
+    <div id="preview">
+        <h2>Podgląd Intencji</h2>
+        <div class="intent-preview">
+            <p>Intencja {{ placeData }}</p>
+            <p>{{ type }}</p>
+            <p>{{ data }}</p>
+            <p>{{ header.content }}</p>
+            <p>dla {{ for }}</p>
+            <p>od {{ from }}</p>
+            <p>(z okazji / w 10 rocznicę)</p>
+        </div>
+    </div>
+
+</div>

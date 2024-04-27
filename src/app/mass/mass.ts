@@ -1,5 +1,5 @@
-export interface Mass {
+export interface Mass  {
     id: number;
-    date: string;
+    //date: Date;
     name: string;
 }

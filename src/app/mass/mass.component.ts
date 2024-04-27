@@ -9,7 +9,7 @@ import { Mass } from './mass';
 export class MassComponent {
     mass: Mass = {
       id: 1,
-      date: '07.02.2024 7:00',
+      //date: '07.02.2024 7:00',
       name: 'Dziękczyna. W rocznicę urodzin Karoliny'
     }
 }

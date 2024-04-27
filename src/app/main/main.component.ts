@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrl: './main.component.css'
 })
 export class MainComponent {
+
+  constructor(private router: Router) {}
+
+  navigateToIntentConfigurator() {
+    this.router.navigate(['intent-configurator/place-1'])
+  }
 
 }

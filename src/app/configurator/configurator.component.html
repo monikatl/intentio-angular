@@ -10,13 +10,13 @@
         </div>
         <div class="form-group">
           <label for="address">Adres:</label>
-          <input type="text" class="form-control" id="address" name="address" [(ngModel)]="parish.address" required>
+          <input type="text" class="form-control" id="addrenss" name="address" [(ngModel)]="parish.address" required>
         </div>
         
-        <button type="button" class="add_button" mat-raised-button (click)="openFormDialog()">DODAJ KAPŁANA</button>
-        <button type="button" class="add_button">DODAJ MIEJSCE</button>
-        <button type="button" class="add_button">DODAJ TERMINY MSZY ŚW.</button>
-        <button style="display: block;" type="submit" class="create_button" [disabled]="!myForm.form.valid">UTWÓRZ PARAFIĘ</button>
+        <button type="button" class="add_button" mat-raised-button (click)="openAddPriestFormDialog()">DODAJ KAPŁANA</button>
+        <button type="button" class="add_button"  mat-raised-button (click)="openAddMassFormDialog()">DODAJ MIEJSCE</button>
+        <button type="button" class="add_button" mat-raised-button (click)="openAddMassFormDialog()">DODAJ TERMINY MSZY ŚW.</button>
+        <button style="display: block;" type="submit" class="create_button" [disabled]="!myForm.form.valid">ZAPISZ PARAFIĘ</button>
 
 
         <div id="elements" >
