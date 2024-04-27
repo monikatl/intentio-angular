@@ -34,6 +34,8 @@ import { Content4Component } from './intent-config/content-4/content-4.component
 import { PreviewComponent } from './preview/preview.component';
 import { DataService } from './services/data-service';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { Summary5Component } from './intent-config/summary-5/summary-5.component';
+import { Pay6Component } from './intent-config/pay-6/pay-6.component';
 
 
 @NgModule({
@@ -55,7 +57,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     Type2Component,
     Date3Component,
     Content4Component,
-    PreviewComponent
+    PreviewComponent,
+    Summary5Component,
+    Pay6Component
   ],
   imports: [
     BrowserModule,

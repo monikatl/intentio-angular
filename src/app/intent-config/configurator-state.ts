@@ -1,6 +1,6 @@
 export class IntentionConfiguratorState {
-    
-    current: string = State.PLACE;
+
+    current: State = State.PLACE;
 
 
     next() {
@@ -12,6 +12,12 @@ export class IntentionConfiguratorState {
         }
         if(this.current === State.DATE) {
             this.current = State.CONTENT
+        }
+        if(this.current === State.CONTENT) {
+            this.current = State.SUMMARY
+        }
+        if(this.current === State.SUMMARY) {
+            this.current = State.PAY
         }
     }
 
@@ -26,6 +32,12 @@ export class IntentionConfiguratorState {
         if(this.current === State.CONTENT) {
             this.current = State.DATE
         }
+        if(this.current === State.SUMMARY) {
+            this.current = State.CONTENT
+        }
+        if(this.current === State.PAY) {
+            this.current = State.SUMMARY
+        }
     }
 }
 
@@ -34,7 +46,7 @@ export enum State {
     TYPE = 'intent-configurator/type-2',
     DATE = 'intent-configurator/date-3',
     CONTENT = 'intent-configurator/content-4',
-    SUMMARY = '5',
-    PAY = '6'
+    SUMMARY = 'intent-configurator/summary-5',
+    PAY = 'intent-configurator/pay-6'
 }
 

@@ -1,0 +1,32 @@
+.main {
+    border: 1px solid #e0c2c0;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 16px;
+}
+
+p {
+    margin-top: 16px;
+    display: inline-block;
+    font-size: small;
+}
+
+.body {
+    margin-left: 8px;
+    font-size: medium;
+}
+
+button {
+    float: right;
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color:#d0cac6 ;
+}
+
+button:hover {
+    cursor:cell;
+    background-color: #dbb0a0;
+}

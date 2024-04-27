@@ -12,6 +12,8 @@ import { Place1Component } from './intent-config/place-1/place-1.component';
 import { Type2Component } from './intent-config/type-2/type-2.component';
 import { Date3Component } from './intent-config/date-3/date-3.component';
 import { Content4Component } from './intent-config/content-4/content-4.component';
+import { Summary5Component } from './intent-config/summary-5/summary-5.component';
+import { Pay6Component } from './intent-config/pay-6/pay-6.component';
 
 
 
@@ -25,7 +27,9 @@ const routes: Routes = [
     { path: 'place-1', component: Place1Component},
     { path: 'type-2', component: Type2Component},
     { path: 'date-3', component: Date3Component},
-    { path: 'content-4', component: Content4Component}
+    { path: 'content-4', component: Content4Component},
+    { path: 'summary-5', component: Summary5Component},
+    { path: 'pay-6', component: Pay6Component}
   ]},
   
 ];

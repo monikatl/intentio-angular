@@ -3,6 +3,8 @@ import { BehaviorSubject, Subject } from 'rxjs';
 import { IntentionPlace } from '../../IntentionPlace';
 import { IntentionType } from '../IntentionType';
 import { Header } from '../../Header';
+import { State } from '../intent-config/configurator-state';
+import { Intention } from '../intention';
 
 @Injectable({
   providedIn: 'root'
@@ -49,5 +51,23 @@ export class DataService {
 
   updateIntenitionFromData(dataToSend: string) {
     this.previewDataSubjectFrom.next(dataToSend)
+  }
+
+  private subjectState= new Subject<State>();
+  state$ = this.subjectState.asObservable();
+
+  updateState(dataToSend: State) {
+    this.subjectState.next(dataToSend);
+  }
+
+  private subjectIntention= new BehaviorSubject<Intention>(new Intention());
+  intention$ = this.subjectIntention.asObservable();
+
+  updateIntention(dataToSend: Intention) {
+    this.subjectIntention.next(dataToSend);
+  }
+
+  getIntention(): Intention {
+    return this.subjectIntention.getValue();
   }
 }

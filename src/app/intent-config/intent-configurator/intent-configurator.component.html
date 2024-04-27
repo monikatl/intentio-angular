@@ -6,12 +6,12 @@
     <div id="configurator">
         <div id="stepper">
             <nav>
-                <button (click)="setState(state.PLACE)">1</button>
-                <button (click)="setState(state.TYPE)" routerLink="/type-2">2</button>
-                <button (click)="setState(state.DATE)" routerLink="/date-3">3</button>
-                <button (click)="setState(state.CONTENT)" routerLink="/content-4">4</button>
-                <button (click)="setState(state.PLACE)" routerLink="/general-5">5</button>
-                <button (click)="setState(state.PLACE)" routerLink="/pay-6">6</button>
+                <button [ngStyle]="{'background-color': configState.current === state.PLACE ? '#ada860' : '#57394a'}" (click)="setState(state.PLACE)">1</button>
+                <button [ngStyle]="{'background-color': configState.current === state.TYPE ? '#ada860' : '#57394a'}" (click)="setState(state.TYPE)" routerLink="/type-2">2</button>
+                <button [ngStyle]="{'background-color': configState.current === state.DATE ? '#ada860' : '#57394a'}" (click)="setState(state.DATE)" routerLink="/date-3">3</button>
+                <button [ngStyle]="{'background-color': configState.current === state.CONTENT ? '#ada860' : '#57394a'}" (click)="setState(state.CONTENT)" routerLink="/content-4">4</button>
+                <button [ngStyle]="{'background-color': configState.current === state.SUMMARY ? '#ada860' : '#57394a'}" (click)="setState(state.SUMMARY)" routerLink="/general-5">5</button>
+                <button [ngStyle]="{'background-color': configState.current === state.PAY ? '#ada860' : '#57394a'}" (click)="setState(state.PAY)" routerLink="/pay-6">6</button>
             </nav>
         </div>
 
@@ -30,12 +30,12 @@
     <div id="preview">
         <h2>Podgląd Intencji</h2>
         <div class="intent-preview">
-            <p [ngStyle]="{'color': configState.current === state.PLACE ? 'blue' : 'black'}">Intencja {{ placeData }}</p>
-            <p [ngStyle]="{'color': configState.current === state.TYPE ? 'blue' : 'black'}">{{ type }}</p>
-            <p [ngStyle]="{'color': configState.current === state.DATE ? 'blue' : 'black'}">{{ data }}</p>
+            <p [ngStyle]="{'color': configState.current === state.PLACE ? 'blue' : 'black'}">Intencja {{ intention.place }}</p>
+            <p [ngStyle]="{'color': configState.current === state.TYPE ? 'blue' : 'black'}">{{ intention.type }}</p>
+            <p [ngStyle]="{'color': configState.current === state.DATE ? 'blue' : 'black'}">{{ intention.date }}</p>
             <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">{{ header.content }}</p>
-            <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">dla {{ for }}</p>
-            <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">od {{ from }}</p>
+            <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">dla {{ intention.for }}</p>
+            <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">od {{ intention.from }}</p>
             <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">(z okazji / w 10 rocznicę)</p>
         </div>
     </div>

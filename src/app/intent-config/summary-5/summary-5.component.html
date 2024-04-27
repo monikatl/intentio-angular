@@ -1,0 +1,33 @@
+<div class="main">
+
+    <div class="intentionElement">
+        <p>Miejsce intencji: </p>
+        <p class="body">{{ intent.place }}</p>
+        <button (click)="change(state.PLACE)">zmień</button>
+    </div>
+
+    <hr>
+
+    <div class="intentionElement">
+        <p>Rodziaj intencji: </p>
+        <p class="body">{{ intent.type }}</p>
+        <button (click)="change(state.TYPE)">zmień</button>
+    </div>
+
+    <hr>
+
+    <div class="intentionElement">
+        <p>Data intencji: </p>
+        <p class="body">{{ intent.date }}</p>
+        <button (click)="change(state.DATE)">zmień</button>
+    </div>
+
+    <hr>
+
+    <div class="intentionElement">
+        <p>Treść intencji: </p>
+        <p class="body">{{ intent.header }} {{ intent.for }} {{ intent.from }}</p>
+        <button (click)="change(state.CONTENT)">zmień</button>
+    </div>
+
+</div>
