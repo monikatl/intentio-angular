@@ -6,12 +6,12 @@
     <div id="configurator">
         <div id="stepper">
             <nav>
-                <a routerLink="/place">1</a>
-                <a routerLink="/type">2</a>
-                <a routerLink="/date">3</a>
-                <a routerLink="/content">4</a>
-                <a routerLink="/general">5</a>
-                <a routerLink="/pay">6</a>
+                <button (click)="setState(state.PLACE)">1</button>
+                <button (click)="setState(state.TYPE)" routerLink="/type-2">2</button>
+                <button (click)="setState(state.DATE)" routerLink="/date-3">3</button>
+                <button (click)="setState(state.CONTENT)" routerLink="/content-4">4</button>
+                <button (click)="setState(state.PLACE)" routerLink="/general-5">5</button>
+                <button (click)="setState(state.PLACE)" routerLink="/pay-6">6</button>
             </nav>
         </div>
 
@@ -30,13 +30,13 @@
     <div id="preview">
         <h2>Podgląd Intencji</h2>
         <div class="intent-preview">
-            <p>Intencja {{ placeData }}</p>
-            <p>{{ type }}</p>
-            <p>{{ data }}</p>
-            <p>{{ header.content }}</p>
-            <p>dla {{ for }}</p>
-            <p>od {{ from }}</p>
-            <p>(z okazji / w 10 rocznicę)</p>
+            <p [ngStyle]="{'color': configState.current === state.PLACE ? 'blue' : 'black'}">Intencja {{ placeData }}</p>
+            <p [ngStyle]="{'color': configState.current === state.TYPE ? 'blue' : 'black'}">{{ type }}</p>
+            <p [ngStyle]="{'color': configState.current === state.DATE ? 'blue' : 'black'}">{{ data }}</p>
+            <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">{{ header.content }}</p>
+            <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">dla {{ for }}</p>
+            <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">od {{ from }}</p>
+            <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">(z okazji / w 10 rocznicę)</p>
         </div>
     </div>
 

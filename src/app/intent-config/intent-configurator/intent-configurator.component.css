@@ -15,21 +15,18 @@ h1 {
   margin: 16px;
 }
 
-nav a {
+nav button {
     padding: 1rem;
     text-decoration: none;
     margin: 10px;
     display: inline-block;
-    background-color: #3D452E;
+    background-color: #ada860;
     color: white;
     border-radius: 25px;
   }
-  nav a:hover {
+  nav button:hover {
     color: white;
-    background-color: #42545C;
-  }
-  nav a.active {
-    background-color: black;
+    background-color: #d8d3ae;
   }
 
   .navigation_button {

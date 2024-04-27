@@ -2,9 +2,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Intention } from '../../intention';
 import { DataService } from '../../services/data-service';
-import { IntentionPlace } from '../../../IntentionPlace';
 import { Header } from '../../../Header';
 import { ContentType } from '../../ContentType';
+import { IntentionConfiguratorState, State } from '../configurator-state';
 
 @Component({
   selector: 'app-intent-configurator',
@@ -14,7 +14,6 @@ import { ContentType } from '../../ContentType';
 })
 export class IntentConfiguratorComponent {
 
-  currentStep: number = 0;
   intention!: Intention
   placeData: string = "";
   type: string = "";
@@ -22,6 +21,10 @@ export class IntentConfiguratorComponent {
   header: Header = new Header(ContentType.THANKSGIVING, "");
   for: string = "";
   from: string = "";
+
+  configState: IntentionConfiguratorState = new IntentionConfiguratorState()
+  state = State
+
 
   constructor(private router: Router, private dataService: DataService) {}
 
@@ -51,28 +54,23 @@ export class IntentConfiguratorComponent {
     });
   }
 
-  stages: string[] = [
-    'intent-configurator/place-1',
-    'intent-configurator/type-2',
-    'intent-configurator/date-3',
-    'intent-configurator/content-4'
-  ];
 
   next(): void {
-    if(this.currentStep < 3){
-      this.currentStep++
-      this.navigate()
-    }
+    this.configState.next()
+    this.navigate()
   }
 
   back(): void {
-    if(this.currentStep > 0){
-      this.currentStep--
-      this.navigate()
-    }
+    this.configState.back()
+    this.navigate()
   }
 
   navigate(): void {
-    this.router.navigate([this.stages[this.currentStep]])
+    this.router.navigate([this.configState.current])
+  }
+
+  setState(state: State) {
+    this.configState.current = state
+    this.navigate()
   }
 }
