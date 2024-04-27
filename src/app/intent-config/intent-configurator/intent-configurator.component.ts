@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { Intention } from '../intention';
-import { DataService } from '../../data-service';
-import { IntentionPlace } from '../../IntentionPlace';
-import { Header } from '../../Header';
-import { ContentType } from '../ContentType';
+import { Intention } from '../../intention';
+import { DataService } from '../../services/data-service';
+import { IntentionPlace } from '../../../IntentionPlace';
+import { Header } from '../../../Header';
+import { ContentType } from '../../ContentType';
 
 @Component({
   selector: 'app-intent-configurator',

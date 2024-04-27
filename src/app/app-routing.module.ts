@@ -6,12 +6,12 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { PriestLoginComponent } from './priest-login/priest-login.component';
 import { StartScreenComponent } from './start-screen/start-screen.component';
 import { MainComponent } from './main/main.component';
-import { ConfiguratorComponent } from './configurator/configurator.component';
-import { IntentConfiguratorComponent } from './intent-configurator/intent-configurator.component';
-import { Place1Component } from './place-1/place-1.component';
-import { Type2Component } from './type-2/type-2.component';
-import { Date3Component } from './date-3/date-3.component';
-import { Content4Component } from './content-4/content-4.component';
+import { ConfiguratorComponent } from './parish-config/configurator/configurator.component';
+import { IntentConfiguratorComponent } from './intent-config/intent-configurator/intent-configurator.component';
+import { Place1Component } from './intent-config/place-1/place-1.component';
+import { Type2Component } from './intent-config/type-2/type-2.component';
+import { Date3Component } from './intent-config/date-3/date-3.component';
+import { Content4Component } from './intent-config/content-4/content-4.component';
 
 
 

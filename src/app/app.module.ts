@@ -11,8 +11,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { MassComponent } from './mass/mass.component';
-import { ConfiguratorComponent } from './configurator/configurator.component';
-import { AddPriestComponent } from './add-priest/add-priest.component';
+import { ConfiguratorComponent } from './parish-config/configurator/configurator.component';
+import { AddPriestComponent } from './parish-config/add-priest/add-priest.component';
 import { ConfigService } from './services/config.service';
 import { StartScreenComponent } from './start-screen/start-screen.component';
 import { UserLoginComponent } from './user-login/user-login.component';
@@ -21,18 +21,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { FooterComponent } from './footer/footer.component';
-import { AddScheduleMassComponent } from './add-schedule-mass/add-schedule-mass.component';
+import { AddScheduleMassComponent } from './parish-config/add-schedule-mass/add-schedule-mass.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatNativeDateModule } from '@angular/material/core';
-import { AddPlaceComponent } from './add-place/add-place.component';
-import { IntentConfiguratorComponent } from './intent-configurator/intent-configurator.component';
-import { Place1Component } from './place-1/place-1.component';
-import { Type2Component } from './type-2/type-2.component';
-import { Date3Component } from './date-3/date-3.component';
-import { Content4Component } from './content-4/content-4.component';
+import { AddPlaceComponent } from './parish-config/add-place/add-place.component';
+import { IntentConfiguratorComponent } from './intent-config/intent-configurator/intent-configurator.component';
+import { Place1Component } from './intent-config/place-1/place-1.component';
+import { Type2Component } from './intent-config/type-2/type-2.component';
+import { Date3Component } from './intent-config/date-3/date-3.component';
+import { Content4Component } from './intent-config/content-4/content-4.component';
 import { PreviewComponent } from './preview/preview.component';
-import { DataService } from '../data-service';
+import { DataService } from './services/data-service';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 

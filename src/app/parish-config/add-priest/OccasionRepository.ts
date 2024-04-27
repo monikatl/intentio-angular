@@ -1,4 +1,4 @@
-import { Occasion } from "../../Occasions";
+import { Occasion } from "../../../Occasions";
 
 export class OccasionRepository {
     occasions: Occasion[] = [

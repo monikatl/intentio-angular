@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
-import { IntentionPlace } from './IntentionPlace';
-import { IntentionType } from './app/IntentionType';
-import { Header } from './Header';
+import { IntentionPlace } from '../../IntentionPlace';
+import { IntentionType } from '../IntentionType';
+import { Header } from '../../Header';
 
 @Injectable({
   providedIn: 'root'

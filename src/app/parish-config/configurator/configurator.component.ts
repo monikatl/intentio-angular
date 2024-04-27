@@ -3,8 +3,8 @@ import { FormsModule, NgForm } from '@angular/forms';
 import {Parish} from './parish'
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { AddPriestComponent } from '../add-priest/add-priest.component';
-import { Priest } from '../priest';
-import { ConfigService } from '../services/config.service';
+import { Priest } from '../../priest';
+import { ConfigService } from '../../services/config.service';
 import { emit } from 'node:process';
 import { AddScheduleMassComponent } from '../add-schedule-mass/add-schedule-mass.component';
 

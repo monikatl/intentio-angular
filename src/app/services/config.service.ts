@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Parish } from '../configurator/parish';
+import { Parish } from '../parish-config/configurator/parish';
 import { Observable, catchError, throwError } from 'rxjs';
 
 @Injectable()

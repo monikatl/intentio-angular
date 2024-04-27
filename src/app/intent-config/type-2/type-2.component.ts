@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IntentionType } from '../IntentionType';
-import { DataService } from '../../data-service';
+import { IntentionType } from '../../IntentionType';
+import { DataService } from '../../services/data-service';
 
 @Component({
   selector: 'app-type-2',

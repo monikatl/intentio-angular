@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IntentionPlace } from '../../IntentionPlace';
-import { DataService } from '../../data-service';
+import { IntentionPlace } from '../../../IntentionPlace';
+import { DataService } from '../../services/data-service';
 
 @Component({
   selector: 'app-place-1',

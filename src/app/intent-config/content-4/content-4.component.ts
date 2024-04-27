@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Header } from '../../Header';
-import { HeadersRepository } from '../../HeadersRepository';
-import { ContentType } from '../ContentType';
-import { DataService } from '../../data-service';
+import { Header } from '../../../Header';
+import { HeadersRepository } from '../../../HeadersRepository';
+import { ContentType } from '../../ContentType';
+import { DataService } from '../../services/data-service';
 
 import { FormControl, FormGroup } from '@angular/forms';
-import { Occasion } from '../../Occasions';
-import { OccasionRepository } from '../add-priest/OccasionRepository';
+import { Occasion } from '../../../Occasions';
+import { OccasionRepository } from '../../parish-config/add-priest/OccasionRepository';
 
 @Component({
   selector: 'app-content-4',

@@ -1,4 +1,4 @@
-import { Priest } from "../priest";
+import { Priest } from "../../priest";
 import { Place } from "./place";
 
 export class Parish {
