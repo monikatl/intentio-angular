@@ -14,6 +14,31 @@ export class Type2Component {
   type!: IntentionType
   intentionType = IntentionType
 
+  isHelpNeeded: boolean = false;
+  helpText: string = "";
+
+  toggleHelpNeeded() {
+    this.isHelpNeeded = !this.isHelpNeeded;
+  }
+
+  showHelp(intentionPlace: IntentionType) {
+    this.toggleHelpNeeded()
+    switch ( intentionPlace ) {
+      case IntentionType.INDIVIDUAL:
+          this.helpText = "Twoja intencja zostanie odprawiona przez kapłana jako jedyna.";
+          break;
+      case IntentionType.INSTITUTIONAL:
+          this.helpText = "Intenja zostanie dołączona do zbioru intencji.";
+          break;
+      case IntentionType.GREGORIAN:
+          this.helpText = "30 Mszy Świętych odprawianych w kolejnych dniach w intencji zmarłego";
+          break;
+      default: 
+          this.helpText = "";
+          break;
+   }
+  }
+
   setIntentionType(intentionType: IntentionType) {
     this.type = intentionType;
     this.sendDataToPreview()

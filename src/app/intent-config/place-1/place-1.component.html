@@ -1,6 +1,19 @@
-<div>
+<div class="main">
     <p>Wybierz podczas jakiego wydarzenia chcesz zamówić intencję:</p>
-    <button type="button" (click)="setIntentionPlace(intentionPlace.MASS)">Msza Święta</button>
-    <button type="button" (click)="setIntentionPlace(intentionPlace.SERVICE)">Nabożeństwo</button>
-    <button type="button" (click)="setIntentionPlace(intentionPlace.MEMORIAL)">Wypominki</button>
+    <button 
+            type="button" 
+            (click)="setIntentionPlace(intentionPlace.MASS)"
+            (mouseenter)="showHelp(intentionPlace.MASS)">Msza Święta</button>
+    <button 
+            type="button" 
+            (click)="setIntentionPlace(intentionPlace.SERVICE)"
+            (mouseenter)="showHelp(intentionPlace.SERVICE)">Nabożeństwo</button>
+    <button 
+            type="button" 
+            (click)="setIntentionPlace(intentionPlace.MEMORIAL)"
+            (mouseenter)="showHelp(intentionPlace.MEMORIAL)">Wypominki</button>
+            
+    <div *ngIf="isHelpNeeded">
+        <p> {{ helpText }} </p>
+    </div>
 </div>

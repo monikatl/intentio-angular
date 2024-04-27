@@ -1,6 +1,19 @@
-<div>
-    <p>Wybierz rodzaj intencji:</p>
-    <button type="button" (click)="setIntentionType(intentionType.INDIVIDUAL)">Indywidualna</button>
-    <button type="button" (click)="setIntentionType(intentionType.INSTITUTIONAL)">Zbiorowa</button>
-    <button type="button" (click)="setIntentionType(intentionType.GREGORIAN)">Gregoriańska</button>
+<div class="main">
+        <p>Wybierz rodzaj intencji:</p>
+        <button 
+            type="button" 
+            (click)="setIntentionType(intentionType.INDIVIDUAL)"
+            (mouseenter)="showHelp(intentionType.INDIVIDUAL)">Indywidualna</button>
+        <button 
+            type="button" 
+            (click)="setIntentionType(intentionType.INSTITUTIONAL)"
+            (mouseenter)="showHelp(intentionType.INSTITUTIONAL)">Zbiorowa</button>
+        <button 
+            type="button" 
+            (click)="setIntentionType(intentionType.GREGORIAN)"
+            (mouseenter)="showHelp(intentionType.GREGORIAN)">Gregoriańska</button>
+
+    <div *ngIf="isHelpNeeded">
+        <p> {{ helpText }} </p>
+    </div>
 </div>

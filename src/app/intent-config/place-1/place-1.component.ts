@@ -13,6 +13,30 @@ export class Place1Component {
 
   place!: IntentionPlace
   intentionPlace = IntentionPlace
+  isHelpNeeded: boolean = false;
+  helpText: string = "";
+
+  toggleHelpNeeded() {
+    this.isHelpNeeded = !this.isHelpNeeded;
+  }
+
+  showHelp(intentionPlace: IntentionPlace) {
+    this.toggleHelpNeeded()
+    switch ( intentionPlace ) {
+      case IntentionPlace.MASS:
+          this.helpText = "Twoja intencja zostanie odprawiona podczas jednej z mszy świętych odbywających się w parafii.";
+          break;
+      case IntentionPlace.SERVICE:
+          this.helpText = "Możesz dołączyć swoją intencję do zbiorowej intencji nabożeństwa odbywającego się w danym okresie liturgicznym.";
+          break;
+      case IntentionPlace.MEMORIAL:
+          this.helpText = "Imię i nazwisko osoby zmarłej zostanie dodane do czytanych co tygodniowo wypominków.";
+          break;
+      default: 
+          this.helpText = "";
+          break;
+   }
+  }
 
   setIntentionPlace(intentionPlace: IntentionPlace) {
     this.place = intentionPlace;
