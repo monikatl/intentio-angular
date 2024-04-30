@@ -3,16 +3,16 @@
       <h1>Konfigurator Intencji</h1>
 </header>
 <div id="main">
-    <div id="configurator">
-        <div id="stepper">
-            <nav>
-                <button [ngStyle]="{'background-color': configState.current === state.PLACE ? '#ada860' : '#57394a'}" (click)="setState(state.PLACE)">1</button>
-                <button [ngStyle]="{'background-color': configState.current === state.TYPE ? '#ada860' : '#57394a'}" (click)="setState(state.TYPE)" routerLink="/type-2">2</button>
-                <button [ngStyle]="{'background-color': configState.current === state.DATE ? '#ada860' : '#57394a'}" (click)="setState(state.DATE)" routerLink="/date-3">3</button>
-                <button [ngStyle]="{'background-color': configState.current === state.CONTENT ? '#ada860' : '#57394a'}" (click)="setState(state.CONTENT)" routerLink="/content-4">4</button>
-                <button [ngStyle]="{'background-color': configState.current === state.SUMMARY ? '#ada860' : '#57394a'}" (click)="setState(state.SUMMARY)" routerLink="/general-5">5</button>
-                <button [ngStyle]="{'background-color': configState.current === state.PAY ? '#ada860' : '#57394a'}" (click)="setState(state.PAY)" routerLink="/pay-6">6</button>
-            </nav>
+        <div id="configurator">
+            <div id="stepper">
+                <nav>
+                    <button [ngStyle]="{'background-color': configState.current === state.PLACE ? '#ada860' : '#e0c2c0'}" (click)="setState(state.PLACE)">1</button>
+                    <button [ngStyle]="{'background-color': configState.current === state.TYPE ? '#ada860' : '#e0c2c0'}" (click)="setState(state.TYPE)" routerLink="/type-2">2</button>
+                    <button [ngStyle]="{'background-color': configState.current === state.DATE ? '#ada860' : '#e0c2c0'}" (click)="setState(state.DATE)" routerLink="/date-3">3</button>
+                    <button [ngStyle]="{'background-color': configState.current === state.CONTENT ? '#ada860' : '#e0c2c0'}" (click)="setState(state.CONTENT)" routerLink="/content-4">4</button>
+                    <button [ngStyle]="{'background-color': configState.current === state.SUMMARY ? '#ada860' : '#e0c2c0'}" (click)="setState(state.SUMMARY)" routerLink="/general-5">5</button>
+                    <button [ngStyle]="{'background-color': configState.current === state.PAY ? '#ada860' : '#e0c2c0'}" (click)="setState(state.PAY)" routerLink="/pay-6">6</button>
+                </nav>
         </div>
 
         <div id="content">
@@ -38,7 +38,7 @@
             <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">od {{ intention.from }}</p>
             <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">(z okazji / w 10 rocznicę)</p>
         </div>
-        <button (click)="escConfig()">Anuluj</button>
+        <button class="leave" (click)="escConfig()">Anuluj</button>
     </div>
 
 </div>

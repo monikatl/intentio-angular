@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { State } from '../intent-config/configurator-state';
 
@@ -12,14 +12,16 @@ export class EndDialogComponent {
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any, 
+    public dialogRef: MatDialogRef<EndDialogComponent>,
     private router: Router) {}
 
     goToPay6() {
       this.router.navigate([State.PAY])
+      this.dialogDismiss()
     }
 
     dialogDismiss() {
-      
+      this.dialogRef.close()
     }
 
 }

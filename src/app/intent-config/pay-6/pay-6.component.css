@@ -1,20 +1,8 @@
-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    border: 1px solid #e0c2c0;
-    border-radius: 4px;
-    margin: 4px;
-    padding: 16px;
-}
-
 p {
     margin-top: 16px;
 }
 
-button {
+.pay {
     width: 250px;
     height: 50px;
     margin: 10px;
@@ -23,7 +11,8 @@ button {
     background-color:#d0cac6 ;
 }
 
-button:hover {
+.pay:hover {
     cursor:cell;
     background-color: #dbb0a0;
 }
+

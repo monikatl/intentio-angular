@@ -61,18 +61,6 @@
     border-radius: 4px 0 0 4px;
   }
 
-  .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    border: 1px solid #e0c2c0;
-    border-radius: 4px;
-    margin: 4px;
-    padding: 16px;
-}
-
 p {
     margin-top: 16px;
 }
