@@ -13,7 +13,6 @@ export class MainComponent {
 
   navigateToIntentConfigurator() {
     this.router.navigate(['intent-configurator/place-1'])
-    new MassesRepository().createMassesCalendar()
   }
 
 }

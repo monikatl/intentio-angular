@@ -23,9 +23,5 @@ import { Mass } from "../mass";
     getData() {
       return this.previewMassesDataSubject.getValue()
     }
-
-    updateData() {
-
-    }
   
   }

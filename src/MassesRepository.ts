@@ -30,7 +30,7 @@ export class MassesRepository {
         return this.masses
     }
 
-    createMassesCalendar() {
+    private createMassesCalendar() {
         let dateNow = new Date();
         for(let i = 0; i <100; i++) {
             console.log(i)
@@ -44,7 +44,7 @@ export class MassesRepository {
         }
     }
 
-    createMasses(date: Date, kind: Kind) {
+    private createMasses(date: Date, kind: Kind) {
         this.scheduleMasses
         .filter(m => m.kind === kind)
         .forEach(m => {
