@@ -1,24 +1,27 @@
 <div class="config-step-container">
-
-    <p>Wybierz termin intencji:</p>
+    <p>Wybierz termin intencji: </p>
     
-    <mat-form-field appearance="outline">
+    <div id="container">
+        <div class="section">
+            <p>Wybierz z kalendarza wolnych intencji:</p>
+            <button mat-icon-button>
+                <mat-icon>calendar_today</mat-icon>
+            </button>
+        </div>
 
-        <input [ngModel]="date" matInput formControlName="releasedAt" 
-               [matDatepicker]="releasedAtPicker" (click)="releasedAtPicker.open()">
-      
-        <mat-datepicker-toggle matSuffix [for]="releasedAtPicker">
-      
-        </mat-datepicker-toggle>
-      
-        <mat-datepicker #releasedAtPicker>
-      
-        </mat-datepicker>
-      
-    </mat-form-field>
-
-    <button (click)="sendDataToPreview()">OK</button>
-  
+        <div class="vertical-crest">
+            <!-- Content goes here -->
+          </div>
     
-
+        <div class="section">
+            <p>Najbliższe wolne intencje:</p>
+            <mat-form-field>
+                <mat-label>Wybierz termin</mat-label>
+                <mat-select (selectionChange)="onSelectionMassChange()" [(value)]="selectedMass">
+                  <mat-option *ngFor="let mass of masses" [value]="mass">{{ mass.getMassDate() }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+    
+    </div>
 </div>

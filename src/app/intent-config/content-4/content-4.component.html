@@ -33,12 +33,10 @@
 
         <mat-form-field>
             <mat-label>Wybierz okazję intencji</mat-label>
-            <mat-select>
-                @for (occasion of occasions; track occasion) {
-                    <mat-option [value]="occasion.name">{{ occasion.name }}</mat-option>
-                }
+            <mat-select [(value)]="selectedOccasion">
+              <mat-option *ngFor="let occasion of occasions" [value]="occasion.name">{{ occasion.name }}</mat-option>
             </mat-select>
-        </mat-form-field>
+          </mat-form-field>
         
     </div>
       

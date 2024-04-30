@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MassesRepository } from '../../MassesRepository';
 
 @Component({
   selector: 'app-main',
@@ -12,6 +13,7 @@ export class MainComponent {
 
   navigateToIntentConfigurator() {
     this.router.navigate(['intent-configurator/place-1'])
+    new MassesRepository().createMassesCalendar()
   }
 
 }

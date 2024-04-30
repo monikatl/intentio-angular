@@ -13,12 +13,13 @@ import { OccasionRepository } from '../../parish-config/add-priest/OccasionRepos
   templateUrl: './content-4.component.html',
   styleUrl: './content-4.component.css'
 })
-export class Content4Component {
+export class Content4Component implements OnInit {
 
   headers: Header[] = []
   occasions: Occasion[] = []
   contentType = ContentType
   currentHeader!: Header
+  selectedOccasion!: string; 
 
 
   personForm = new FormGroup({
@@ -28,6 +29,9 @@ export class Content4Component {
 
   constructor(private dataService: DataService) {}
 
+  ngOnInit(): void {
+    this.getOccasions()
+  }
 
   getHeaders(type: ContentType) {
     this.headers = new HeadersRepository().headers.filter((header) => header.type == type)

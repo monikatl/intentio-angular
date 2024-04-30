@@ -1,3 +1,5 @@
+import { Mass } from "./mass";
+
 export class Intention {
     place: string = "";
     type: string = "";
@@ -5,4 +7,10 @@ export class Intention {
     header: string = "";
     for: string = "";
     from: string = "";
+    mass!: Mass;
+
+    assignMass(mass: Mass) {
+        this.mass = mass;
+    }
+    
 }

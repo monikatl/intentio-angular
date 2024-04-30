@@ -6,8 +6,13 @@ export interface IMass {
 
 export class ScheduleMass implements IMass {
     
-    hour: Hour = new Hour();
-    kind: Kind = Kind.EVERYDAY;
+    hour: Hour;
+    kind: Kind;
+
+    constructor(hour: Hour, kind: Kind) {
+        this.hour = hour;
+        this.kind = kind;
+    }
     
 }
 
@@ -19,6 +24,10 @@ export class ScheduleMass implements IMass {
 
 export class Hour {
     value: string = "18:00";
+
+    constructor(hour: string) {
+        this.value = hour;
+    }
 
 }
 

@@ -15,3 +15,21 @@ button:hover {
     cursor:cell;
     background-color: #dbb0a0;
 }
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+.section {
+    flex: 1;
+}
+
+.vertical-crest {
+    width: 1px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    background-color: #e0c2c0; /* Background color */
+    margin: 40px;
+    position: relative;
+  }
+  

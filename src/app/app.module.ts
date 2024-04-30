@@ -37,6 +37,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { Summary5Component } from './intent-config/summary-5/summary-5.component';
 import { Pay6Component } from './intent-config/pay-6/pay-6.component';
 import { EndDialogComponent } from './end-dialog/end-dialog.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -74,7 +75,8 @@ import { EndDialogComponent } from './end-dialog/end-dialog.component';
     MatDatepickerModule,
     MatNativeDateModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatIconModule
   ],
   providers: [
     ConfigService,
