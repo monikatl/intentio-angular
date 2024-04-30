@@ -57,6 +57,16 @@ export class IntentConfiguratorComponent {
       this.sendDataToSummary();
     });
 
+    this.dataService.previewDataAnniversary$.subscribe(data => {
+      this.intention.anniversary = data;
+      this.sendDataToSummary();
+    });
+
+    this.dataService.previewDataOccasion$.subscribe(data => {
+      this.intention.occasion = data;
+      this.sendDataToSummary();
+    });
+
     this.dataService.state$.subscribe( data => {
       this.configState.current = data;
       this.sendDataToSummary();

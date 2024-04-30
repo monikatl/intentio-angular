@@ -53,6 +53,20 @@ export class DataService {
     this.previewDataSubjectFrom.next(dataToSend)
   }
 
+  private previewDataSubjectAnniversary= new Subject<number>();
+  previewDataAnniversary$ = this.previewDataSubjectAnniversary.asObservable();
+
+  updateIntentionAnniversaryData(dataToSend: number) {
+    this.previewDataSubjectAnniversary.next(dataToSend);
+  }
+
+  private previewDataSubjectOccasion= new Subject<string>();
+  previewDataOccasion$ = this.previewDataSubjectOccasion.asObservable();
+
+  updateIntentionOccasionData(dataToSend: string) {
+    this.previewDataSubjectOccasion.next(dataToSend);
+  }
+
   private subjectState= new Subject<State>();
   state$ = this.subjectState.asObservable();
 
@@ -70,4 +84,5 @@ export class DataService {
   getIntention(): Intention {
     return this.subjectIntention.getValue();
   }
+
 }

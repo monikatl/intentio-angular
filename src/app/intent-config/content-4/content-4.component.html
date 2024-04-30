@@ -15,29 +15,59 @@
         </li>
     </ul>
 
-    <form [formGroup]="personForm">
-        <label for="for">DLA: </label>
-        <input id="for" type="text" formControlName="for" (input)="onForInputChange()">
-      
-        <label for="from">OD: </label>
-        <input id="from" type="text" formControlName="from" (input)="onFromInputChange()">
+    <form [formGroup]="personForm" style="display: flex;">
+        <div style="margin-right: 30px;">
+            <label for="for">DLA: </label>
+            <input id="for" type="text" formControlName="for" (input)="onForInputChange()">
+        </div>
+        
+        <div>
+            <label for="from">OD: </label>
+            <input id="from" type="text" formControlName="from" (input)="onFromInputChange()">
+        </div>
     </form>
 
-
-    <p><mat-slide-toggle labelPosition="before">w rocznicę</mat-slide-toggle></p>
-    <div id="anniversaryContainer">
-
-    </div>
-    <p><mat-slide-toggle labelPosition="before">z okazji</mat-slide-toggle></p>
-    <div id="occasionContainer">
+   
+    <div id="anniversaryContainer" style="display: flex;">
+        <p><mat-slide-toggle [(ngModel)]="anniversaryToggle" (change)="checkAnniversaryToggle()"
+            labelPosition="after">w </mat-slide-toggle></p>
 
         <mat-form-field>
-            <mat-label>Wybierz okazję intencji</mat-label>
-            <mat-select [(value)]="selectedOccasion">
+            <mat-label>Wybierz liczbę</mat-label>
+            <mat-select 
+                (selectionChange)="onSelectionAnniversaryChange()"
+                [disabled]="isDisabledAnniversary" 
+                [(value)]="selectedNumber">
+              <mat-option *ngFor="let number of numbers" [value]="number">{{ number }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <p>rocznicę</p>
+        <mat-form-field>
+            <mat-label>Wybierz okazję</mat-label>
+            <mat-select 
+                (selectionChange)="onSelectionAnniversaryNumberedChange()"
+                [disabled]="isDisabledAnniversary" 
+                [(value)]="selectedNumberedOccasion">
+              <mat-option *ngFor="let occasion of occasions" [value]="occasion.name">{{ occasion.name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+    
+    <div id="occasionContainer" style="display: flex;">
+        <p><mat-slide-toggle [(ngModel)]="occasionToggle" (change)="checkOccasionToggle()"
+            labelPosition="before">z okazji</mat-slide-toggle></p>
+
+        <mat-form-field>
+            <mat-label>Wybierz okazję</mat-label>
+            <mat-select 
+                (selectionChange)="onSelectionOccasionChange()"
+                [disabled]="isDisabledOccasion" 
+                [(value)]="selectedOccasion">
               <mat-option *ngFor="let occasion of occasions" [value]="occasion.name">{{ occasion.name }}</mat-option>
             </mat-select>
           </mat-form-field>
-        
     </div>
       
        

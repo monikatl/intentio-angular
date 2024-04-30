@@ -26,11 +26,6 @@ export class Date3Component implements OnInit {
     this.masses = this.massesDataService.getData()
   }
 
-  sendDataToPreview() {
-    const dataToSend =  "24 marca 2025 roku"
-    this.dataService.updateIntenitionDateData(dataToSend);
-  }
-
   onSelectionMassChange() {
     this.dataService.updateIntenitionDateData(this.selectedMass.getMassDate())
   }

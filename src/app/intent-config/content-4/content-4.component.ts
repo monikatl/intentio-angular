@@ -7,6 +7,7 @@ import { DataService } from '../../services/data-service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Occasion } from '../../../Occasions';
 import { OccasionRepository } from '../../parish-config/add-priest/OccasionRepository';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-content-4',
@@ -17,9 +18,19 @@ export class Content4Component implements OnInit {
 
   headers: Header[] = []
   occasions: Occasion[] = []
+  numbers: number[] = []
   contentType = ContentType
   currentHeader!: Header
   selectedOccasion!: string; 
+  selectedNumberedOccasion!: string; 
+  selectedNumber!: number;
+
+  isDisabledAnniversary: boolean = true;
+  isDisabledOccasion: boolean = true;
+  isDisabledNumberedOccasion: boolean = true;
+
+  occasionToggle: boolean = false;
+  anniversaryToggle: boolean = false;
 
 
   personForm = new FormGroup({
@@ -31,6 +42,7 @@ export class Content4Component implements OnInit {
 
   ngOnInit(): void {
     this.getOccasions()
+    this.generateNumbers()
   }
 
   getHeaders(type: ContentType) {
@@ -79,6 +91,53 @@ export class Content4Component implements OnInit {
       const dataToSend =  value
       this.dataService.updateIntenitionFromData(dataToSend);
     }
+  }
+
+  sendAnniverasyDataToPreview() {
+    const dataToSend = this.selectedNumber
+    this.dataService.updateIntentionAnniversaryData(dataToSend)
+  }
+
+  sendOccasionDataToPreview(occasion: string) {
+    const dataToSend =  occasion
+    this.dataService.updateIntentionOccasionData(dataToSend)
+  }
+
+
+
+  generateNumbers() {
+   this.numbers = Array.from({length: 100}, (_, index) => index + 1);
+  }
+
+  checkOccasionToggle() {
+    if(this.occasionToggle) {
+      if(this.anniversaryToggle) {
+        this.anniversaryToggle = false;
+      }
+      this.isDisabledOccasion = !this.isDisabledOccasion;
+    }
+  }
+
+  checkAnniversaryToggle() {
+    if(this.anniversaryToggle) {
+      if(this.occasionToggle) {
+        this.occasionToggle = false;
+      }
+      this.isDisabledAnniversary = !this.isDisabledAnniversary;
+      this.isDisabledNumberedOccasion = !this.isDisabledNumberedOccasion;
+    }
+  }
+
+  onSelectionAnniversaryNumberedChange() {
+    this.sendOccasionDataToPreview(this.selectedNumberedOccasion)
+  }
+
+  onSelectionAnniversaryChange() {
+    this.sendAnniverasyDataToPreview()
+  }
+
+  onSelectionOccasionChange() {
+    this.sendOccasionDataToPreview(this.selectedOccasion)
   }
 
 }
