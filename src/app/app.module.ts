@@ -38,6 +38,10 @@ import { Summary5Component } from './intent-config/summary-5/summary-5.component
 import { Pay6Component } from './intent-config/pay-6/pay-6.component';
 import { EndDialogComponent } from './end-dialog/end-dialog.component';
 import { MatIconModule } from '@angular/material/icon';
+import { HeaderComponent } from './header/header.component';
+import { ArrivingIntentionsComponent } from './arriving-intentions/arriving-intentions.component';
+import { ArchiveIntentionsComponent } from './archive-intentions/archive-intentions.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 
 @NgModule({
@@ -62,7 +66,11 @@ import { MatIconModule } from '@angular/material/icon';
     PreviewComponent,
     Summary5Component,
     Pay6Component,
-    EndDialogComponent
+    EndDialogComponent,
+    HeaderComponent,
+    ArrivingIntentionsComponent,
+    ArchiveIntentionsComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,

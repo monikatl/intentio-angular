@@ -1,0 +1,17 @@
+div {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+
+.day {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    transition-duration: 0.3s;
+}
+
+.day:hover {
+    background-color: beige;
+    cursor: pointer;
+}

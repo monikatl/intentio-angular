@@ -1,8 +1,26 @@
 button {
     margin: 16px;
+    float: center;
     font-family: fantasy;
     color: aliceblue;
     background-color: #57394a;
     border: none;
     border-radius: 4px;
 }
+
+#calendar {
+    float: left;
+    width: 40%;
+    padding-left: 20px;
+}
+app-calendar {
+    background-color: #57394a;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.intentions {
+    float: left;
+    width: 60%;
+}
+

@@ -107,7 +107,7 @@ export class IntentConfiguratorComponent {
   openEndDialog(): void {
     const dialogRef = this.dialog.open(EndDialogComponent, {
       width: '250px',
-      data: { message: 'Wiadomość do wyświetlenia w dialogu' }
+      data: { intention: this.intention }
     });
 
     dialogRef.afterClosed().subscribe(result => {

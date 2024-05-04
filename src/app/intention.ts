@@ -19,5 +19,9 @@ export class Intention {
     getOccasion() {
         return this.occasion + " " + this.anniversary
     }
+
+    getIntention() {
+        return this.date + " " + this.header + " dla " + this.for + "."
+    }
     
 }

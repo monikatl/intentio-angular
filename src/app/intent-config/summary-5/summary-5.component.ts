@@ -19,6 +19,7 @@ export class Summary5Component implements OnInit{
 
   ngOnInit(): void {
     this.intent = this.dataService.getIntention()
+    console.log(this.intent.getIntention())
   }
 
   change(state: State) {
