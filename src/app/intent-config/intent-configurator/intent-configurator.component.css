@@ -26,6 +26,7 @@ nav button {
     border-radius: 50%;
     border: none;
     justify-items: center;
+    transition-duration: 0.5s;
   }
   nav button:hover {
     color: white;

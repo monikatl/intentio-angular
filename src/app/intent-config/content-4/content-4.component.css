@@ -63,6 +63,7 @@
 
 p {
     margin-top: 16px;
+    font-size: medium;
 }
 
 button {
@@ -80,5 +81,10 @@ button {
 button:hover {
     cursor:cell;
     background-color: #dbb0a0;
+}
+
+mat-form-field {
+  margin-left: 12px;
+  margin-right: 12px;
 }
 

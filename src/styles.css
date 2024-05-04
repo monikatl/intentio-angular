@@ -38,11 +38,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     font-size: 16px;
     color: aliceblue;
     background-color: #57394a;
-   
+    transition-duration: 0.4s;
   }
 
 .navigation_button:hover {
     background-color: #dbb0a0;
+}
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 36px;
+    border: 1px solid #57394a;
+    border-radius: 5px;
 }
 
 
