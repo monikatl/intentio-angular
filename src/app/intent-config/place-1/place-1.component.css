@@ -9,6 +9,27 @@ button {
     border-radius: 10px;
     border: none;
     background-color:#d0cac6 ;
+    position: relative;
+    display: inline-block;
+}
+
+button .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #d0cac6 ;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 105%;
+}
+
+button:hover .tooltiptext {
+    visibility: visible;
 }
 
 button:hover {

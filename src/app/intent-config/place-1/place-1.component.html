@@ -2,18 +2,14 @@
     <p>Wybierz podczas jakiego wydarzenia chcesz zamówić intencję:</p>
     <button 
             type="button" 
-            (click)="setIntentionPlace(intentionPlace.MASS)"
-            (mouseenter)="showHelp(intentionPlace.MASS)">Msza Święta</button>
+            (click)="setIntentionPlace(intentionPlace.MASS)">Msza Święta
+            <span class="tooltiptext">Twoja intencja zostanie odprawiona podczas jednej z mszy świętych odbywających się w parafii.</span></button>
     <button 
             type="button" 
-            (click)="setIntentionPlace(intentionPlace.SERVICE)"
-            (mouseenter)="showHelp(intentionPlace.SERVICE)">Nabożeństwo</button>
+            (click)="setIntentionPlace(intentionPlace.SERVICE)">Nabożeństwo
+            <span class="tooltiptext">Możesz dołączyć swoją intencję do zbiorowej intencji nabożeństwa odbywającego się w danym okresie liturgicznym.</span></button>
     <button 
             type="button" 
-            (click)="setIntentionPlace(intentionPlace.MEMORIAL)"
-            (mouseenter)="showHelp(intentionPlace.MEMORIAL)">Wypominki</button>
-            
-    <div *ngIf="isHelpNeeded">
-        <p> {{ helpText }} </p>
-    </div>
+            (click)="setIntentionPlace(intentionPlace.MEMORIAL)">Wypominki
+            <span class="tooltiptext">Imię i nazwisko osoby zmarłej zostanie dodane do czytanych co tygodniowo wypominków.</span></button>
 </div>
