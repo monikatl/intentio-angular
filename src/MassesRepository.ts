@@ -1,8 +1,9 @@
-import { Date3Component } from "./app/intent-config/date-3/date-3.component";
+import { IEvent } from "./IEvents";
+import { IEventsRepository } from "./IEventsRepository";
 import { Mass } from "./app/mass";
 import { Hour, Kind, ScheduleMass } from "./app/schedule-mass";
 
-export class MassesRepository {
+export class MassesRepository implements IEventsRepository{
 
     hours: Hour[] = [
         new Hour("7:00"),
@@ -26,8 +27,12 @@ export class MassesRepository {
         this.createMassesCalendar()
     }
 
+    getData() {
+        return this.getMasses();
+    }
+
     getMasses() {
-        return this.masses
+        return this.masses;
     }
 
     private createMassesCalendar() {

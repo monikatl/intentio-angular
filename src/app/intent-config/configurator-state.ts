@@ -1,12 +1,23 @@
+import { IntentionPlace } from "../../IntentionPlace";
+
 export class IntentionConfiguratorState {
 
     current: State = State.PLACE;
+    mode!: IntentionPlace;
+
+    setMode(mode: IntentionPlace) {
+        this.mode = mode;
+    }
 
 
     next() {
         switch(this.current) {
             case State.PLACE:
-                this.current = State.TYPE;
+                if(this.mode === IntentionPlace.MEMORIAL){
+                    this.current = State.DATE
+                } else {
+                    this.current = State.TYPE;
+                }
                 break;
             case State.TYPE:
                 this.current = State.DATE;
@@ -27,7 +38,11 @@ export class IntentionConfiguratorState {
             this.current = State.PLACE
         }
         if(this.current === State.DATE) {
-            this.current = State.TYPE
+            if(this.mode === IntentionPlace.MEMORIAL){
+                this.current = State.PLACE
+            } else {
+                this.current = State.TYPE
+            }
         }
         if(this.current === State.CONTENT) {
             this.current = State.DATE

@@ -1,7 +1,8 @@
+import { IntentionPlace } from "../IntentionPlace";
 import { Mass } from "./mass";
 
 export class Intention {
-    place: string = "";
+    place!: IntentionPlace;
     type: string = "";
     date: string = "";
     header: string = "";

@@ -17,6 +17,8 @@ import { EndDialogComponent } from '../../end-dialog/end-dialog.component';
 export class IntentConfiguratorComponent {
 
   intention: Intention = new Intention();
+  //memorial!: Memorial;
+
   header: Header = new Header(ContentType.THANKSGIVING, "");
   nextButtonText: string = "DALEJ"
 
@@ -75,6 +77,7 @@ export class IntentConfiguratorComponent {
 
 
   next(): void {
+    //if()
     if(this.configState.current != State.SUMMARY) {
       this.configState.next();
       this.navigate();

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data-service';
-import { MassesDataService } from '../../services/masses-data-service';
-import { Mass } from '../../mass';
+import { EventsDataService } from '../../services/events-data-service';
+import { IEvent } from '../../../IEvents';
+import { IntentionPlace } from '../../../IntentionPlace';
 import { MassesRepository } from '../../../MassesRepository';
-import { Hour, Kind, ScheduleMass } from '../../schedule-mass';
+import { ServicesRepository } from '../../../ServicesRepository';
+import { MemorialRepository } from '../../../MemorialRepository';
 
 
 @Component({
@@ -13,21 +15,38 @@ import { Hour, Kind, ScheduleMass } from '../../schedule-mass';
 })
 export class Date3Component implements OnInit {
 
-  constructor(private dataService: DataService, private massesDataService: MassesDataService) {}
+  constructor(private dataService: DataService, private eventsDataService: EventsDataService) {
+
+  }
   
   date!: string;
 
-  masses: Mass[] = []
+  events: IEvent[] = []
 
-  selectedMass!: Mass;
+  selectedEvent!: IEvent;
 
   ngOnInit(): void {
-    this.massesDataService.loadData()
-    this.masses = this.massesDataService.getData()
+    this.eventsDataService.loadData()
+    this.events = this.eventsDataService.getData()
+    this.eventsDataService.setRepository(this.resolveRepository())
   }
 
   onSelectionMassChange() {
-    this.dataService.updateIntenitionDateData(this.selectedMass.getMassDate())
+    //this.dataService.updateIntenitionDateData(this.selectedEvent.getDate())
   }
 
+  resolveRepository() {
+    let place = this.dataService.getIntentionPlace()
+    console.log(place);
+    switch(place) {
+      case IntentionPlace.MASS:
+        return new MassesRepository();
+      case IntentionPlace.SERVICE:
+        return new ServicesRepository();
+      case IntentionPlace.MEMORIAL:
+        return new MemorialRepository();
+    }
+  }
 }
+
+

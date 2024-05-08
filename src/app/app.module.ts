@@ -42,6 +42,7 @@ import { HeaderComponent } from './header/header.component';
 import { ArrivingIntentionsComponent } from './arriving-intentions/arriving-intentions.component';
 import { ArchiveIntentionsComponent } from './archive-intentions/archive-intentions.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { LateComponent } from './late/late.component';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { CalendarComponent } from './calendar/calendar.component';
     HeaderComponent,
     ArrivingIntentionsComponent,
     ArchiveIntentionsComponent,
-    CalendarComponent
+    CalendarComponent,
+    LateComponent
   ],
   imports: [
     BrowserModule,

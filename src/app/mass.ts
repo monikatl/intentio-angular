@@ -1,8 +1,9 @@
+import { IEvent } from "../IEvents";
 import { Intention } from "./intention";
 import { Priest } from "./priest";
 import { ScheduleMass } from "./schedule-mass";
 
-export class Mass {
+export class Mass implements IEvent {
     scheduleMass: ScheduleMass;
     date: Date;
     isFree: boolean;

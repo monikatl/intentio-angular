@@ -11,11 +11,15 @@ import { Intention } from '../intention';
 })
 export class DataService {
 
-  private previewDataSubject = new Subject<IntentionPlace>();
+  private previewDataSubject = new BehaviorSubject<IntentionPlace>(IntentionPlace.MASS);
   previewData$ = this.previewDataSubject.asObservable();
 
   updateIntenitionPlaceData(data: IntentionPlace) {
     this.previewDataSubject.next(data);
+  }
+
+  getIntentionPlace() {
+    return this.previewDataSubject.getValue()
   }
 
   private previewDataSubjectType = new Subject<IntentionType>();
