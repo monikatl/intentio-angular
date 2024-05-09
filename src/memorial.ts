@@ -26,4 +26,8 @@ export class Memorial implements IEvent {
         this.hour = hour;
     }
 
+    getDate(): string {
+        return this.date.getDay() + "-" + this.date.getMonth() + "-" + this.date.getFullYear() + " " + this.hour.value
+    }
+
 }

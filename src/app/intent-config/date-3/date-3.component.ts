@@ -29,7 +29,7 @@ export class Date3Component implements OnInit {
     this.events = this.eventsDataService.loadData(this.resolveRepository())
   }
 
-  onSelectionMassChange() {
+  onSelectionEventChange() {
     //this.dataService.updateIntenitionDateData(this.selectedEvent.getDate())
   }
 

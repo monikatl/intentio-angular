@@ -17,8 +17,8 @@
             <p>Najbliższe wolne intencje:</p>
             <mat-form-field>
                 <mat-label>Wybierz termin</mat-label>
-                <mat-select (selectionChange)="onSelectionMassChange()" [(value)]="selectedEvent">
-                  <mat-option *ngFor="let event of events" [value]="event">{{ event }}</mat-option>
+                <mat-select (selectionChange)="onSelectionEventChange()" [(value)]="selectedEvent">
+                  <mat-option *ngFor="let event of events" [value]="event">{{ event.getDate() }}</mat-option>
                 </mat-select>
               </mat-form-field>
         </div>

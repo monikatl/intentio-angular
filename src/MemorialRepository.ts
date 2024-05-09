@@ -13,6 +13,11 @@ export class MemorialRepository implements IEventsRepository {
 
     memorialsCalendar: Memorial[] = []
 
+    constructor() {
+        this.createMemoriesCalendar()
+    }
+
+
     getData(): IEvent[] {
         return this.getMemorials();
     }

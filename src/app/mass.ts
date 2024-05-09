@@ -47,7 +47,7 @@ export class Mass implements IEvent {
         this.priests.push(priest)
     }
 
-    getMassDate() {
+    getDate() {
         let date = 
         this.scheduleMass.hour.value + " " + 
         this.date.getDate() + "-" + 
