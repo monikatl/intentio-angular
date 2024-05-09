@@ -30,7 +30,7 @@ export class Date3Component implements OnInit {
   }
 
   onSelectionEventChange() {
-    //this.dataService.updateIntenitionDateData(this.selectedEvent.getDate())
+    this.dataService.updateIntenitionDateData(this.selectedEvent.getDate())
   }
 
   resolveRepository() {
