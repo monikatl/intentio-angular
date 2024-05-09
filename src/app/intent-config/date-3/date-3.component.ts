@@ -26,9 +26,7 @@ export class Date3Component implements OnInit {
   selectedEvent!: IEvent;
 
   ngOnInit(): void {
-    this.eventsDataService.loadData()
-    this.events = this.eventsDataService.getData()
-    this.eventsDataService.setRepository(this.resolveRepository())
+    this.events = this.eventsDataService.loadData(this.resolveRepository())
   }
 
   onSelectionMassChange() {

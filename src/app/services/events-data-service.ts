@@ -15,9 +15,11 @@ import { IEventsRepository } from "../../IEventsRepository";
     private repository!: IEventsRepository;
   
 
-    loadData() {
+    loadData(repository: IEventsRepository) {
+      this.setRepository(repository)
       let data = this.repository.getData();
       this.previewEventsDataSubject.next(data);
+      return this.getData()
     }
 
     setRepository(repository: IEventsRepository) {
