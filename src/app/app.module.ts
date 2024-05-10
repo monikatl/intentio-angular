@@ -43,6 +43,7 @@ import { ArrivingIntentionsComponent } from './arriving-intentions/arriving-inte
 import { ArchiveIntentionsComponent } from './archive-intentions/archive-intentions.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { LateComponent } from './late/late.component';
+import { Content4NamesComponent } from './intent-config/content-4-names/content-4-names.component';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { LateComponent } from './late/late.component';
     ArrivingIntentionsComponent,
     ArchiveIntentionsComponent,
     CalendarComponent,
-    LateComponent
+    LateComponent,
+    Content4NamesComponent
   ],
   imports: [
     BrowserModule,

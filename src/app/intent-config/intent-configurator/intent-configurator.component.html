@@ -36,6 +36,8 @@
             <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">{{ header.content }}</p>
             <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">dla {{ intention.for }}</p>
             <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">od {{ intention.from }}</p>
+            <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">{{ intention.firstName }}</p>
+            <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">{{ intention.name }}</p>
             <p [ngStyle]="{'color': configState.current === state.CONTENT ? 'blue' : 'black'}">{{ intention.getOccasion() }}</p>
         </div>
         <button class="leave" (click)="escConfig()">Anuluj</button>

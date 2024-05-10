@@ -57,6 +57,21 @@ export class DataService {
     this.previewDataSubjectFrom.next(dataToSend)
   }
 
+  private previewDataSubjectFirstName = new Subject<string>();
+  previewDataFirstName$ = this.previewDataSubjectFirstName.asObservable();
+
+  updateIntenitionFirstNameData(dataToSend: string) {
+    this.previewDataSubjectFirstName.next(dataToSend)
+  }
+
+  private previewDataSubjectName = new Subject<string>();
+  previewDataName$ = this.previewDataSubjectName.asObservable();
+
+  updateIntenitionNameData(dataToSend: string) {
+    this.previewDataSubjectName.next(dataToSend)
+  }
+
+
   private previewDataSubjectAnniversary= new Subject<number>();
   previewDataAnniversary$ = this.previewDataSubjectAnniversary.asObservable();
 

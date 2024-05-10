@@ -1,0 +1,13 @@
+<div class="config-step-container">
+    <form [formGroup]="personForm" style="display: flex;">
+        <div style="margin-right: 30px;">
+            <label firstName="firstName">Imię: </label>
+            <input id="firstName" type="text" formControlName="name" (input)="onFirstNameInputChange()">
+        </div>
+        
+        <div>
+            <label for="name">Nazwisko: </label>
+            <input id="name" type="text" formControlName="name" (input)="onNameInputChange()">
+        </div>
+    </form>    
+</div>

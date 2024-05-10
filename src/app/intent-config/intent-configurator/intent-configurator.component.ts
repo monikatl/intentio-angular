@@ -30,11 +30,13 @@ export class IntentConfiguratorComponent {
   ngOnInit() {
     this.dataService.previewData$.subscribe(data => {
       this.intention.place = data;
+      this.configState.setMode(data)
       this.sendDataToSummary();
     });
 
     this.dataService.previewDataType$.subscribe(data => {
       this.intention.type = data;
+      this.configState.setType(data)
       this.sendDataToSummary();
     });
 
@@ -59,6 +61,17 @@ export class IntentConfiguratorComponent {
       this.sendDataToSummary();
     });
 
+    this.dataService.previewDataFirstName$.subscribe(data => {
+      this.intention.firstName = data
+      this.sendDataToSummary();
+    });
+
+    this.dataService.previewDataName$.subscribe(data => {
+      this.intention.name = data;
+      this.sendDataToSummary();
+    });
+
+
     this.dataService.previewDataAnniversary$.subscribe(data => {
       this.intention.anniversary = data;
       this.sendDataToSummary();
@@ -77,7 +90,6 @@ export class IntentConfiguratorComponent {
 
 
   next(): void {
-    //if()
     if(this.configState.current != State.SUMMARY) {
       this.configState.next();
       this.navigate();

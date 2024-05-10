@@ -1,15 +1,20 @@
 import { IntentionPlace } from "../../IntentionPlace";
+import { IntentionType } from "../IntentionType";
 
 export class IntentionConfiguratorState {
 
     current: State = State.PLACE;
     mode!: IntentionPlace;
+    type!: IntentionType;
 
     setMode(mode: IntentionPlace) {
         this.mode = mode;
     }
 
-
+    setType(type: IntentionType) {
+        this.type = type
+    }
+    
     next() {
         switch(this.current) {
             case State.PLACE:
@@ -23,15 +28,19 @@ export class IntentionConfiguratorState {
                 this.current = State.DATE;
                 break;
             case State.DATE:
-                this.current = State.CONTENT
+                if(this.mode === IntentionPlace.MEMORIAL || this.type === IntentionType.GREGORIAN){
+                    this.current = State.CONTENT_NAMES
+                } else {
+                    this.current = State.CONTENT
+                }
                 break;
             case State.CONTENT:
+            case State.CONTENT_NAMES:
                 this.current = State.SUMMARY
                 break;
             case State.SUMMARY:
         }
     }
-
 
     back() {
         if(this.current === State.TYPE) {
@@ -44,11 +53,15 @@ export class IntentionConfiguratorState {
                 this.current = State.TYPE
             }
         }
-        if(this.current === State.CONTENT) {
+        if(this.current === State.CONTENT || this.current === State.CONTENT_NAMES) {
             this.current = State.DATE
         }
         if(this.current === State.SUMMARY) {
-            this.current = State.CONTENT
+            if(this.mode === IntentionPlace.MEMORIAL || this.type === IntentionType.GREGORIAN){
+                this.current = State.CONTENT_NAMES
+            } else {
+                this.current = State.CONTENT
+            }
         }
     }
 }
@@ -58,6 +71,7 @@ export enum State {
     TYPE = 'intent-configurator/type-2',
     DATE = 'intent-configurator/date-3',
     CONTENT = 'intent-configurator/content-4',
+    CONTENT_NAMES = 'intent-configurator/content-4-names',
     SUMMARY = 'intent-configurator/summary-5',
     PAY = 'intent-configurator/pay-6'
 }

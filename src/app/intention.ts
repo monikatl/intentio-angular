@@ -10,6 +10,9 @@ export class Intention {
     from: string = "";
     occasion: string = "";
     anniversary: number = 0;
+
+    firstName: string = "";
+    name: string = "";
     
     mass!: Mass;
 
