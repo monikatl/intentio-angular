@@ -15,6 +15,14 @@ import { Content4Component } from './intent-config/content-4/content-4.component
 import { Summary5Component } from './intent-config/summary-5/summary-5.component';
 import { Pay6Component } from './intent-config/pay-6/pay-6.component';
 import { Content4NamesComponent } from './intent-config/content-4-names/content-4-names.component';
+import { ParishEditorComponent } from './parish/parish-editor/parish-editor.component';
+import { ParishElementsComponent } from './parish/parish-elements/parish-elements.component';
+import { PriestsElementsComponent } from './parish/priests-elements/priests-elements.component';
+import { MassesElementsComponent } from './parish/masses-elements/masses-elements.component';
+import { ServicesElementsComponent } from './parish/services-elements/services-elements.component';
+import { SacramentElementsComponent } from './parish/sacrament-elements/sacrament-elements.component';
+import { PlacesElementsComponent } from './parish/places-elements/places-elements.component';
+import { MemorialsElementsComponent } from './parish/memorials-elements/memorials-elements.component';
 
 
 
@@ -24,6 +32,15 @@ const routes: Routes = [
   { path: 'priest-login', component: PriestLoginComponent },
   { path: 'main', component: MainComponent },
   { path: 'configurator', component: ConfiguratorComponent },
+  { path: 'parish-editor', component: ParishEditorComponent, children: [
+    { path: 'parish-elements', component: ParishElementsComponent},
+    { path: 'priests-elements', component: PriestsElementsComponent},
+    { path: 'masses-elements', component: MassesElementsComponent},
+    { path: 'services-elements', component: ServicesElementsComponent},
+    { path: 'sacrament-elements', component: SacramentElementsComponent},
+    { path: 'memorials-elements', component: MemorialsElementsComponent},
+    { path: 'places-elements', component: PlacesElementsComponent}
+  ]},
   { path: 'intent-configurator', component: IntentConfiguratorComponent, children: [
     { path: 'place-1', component: Place1Component},
     { path: 'type-2', component: Type2Component},

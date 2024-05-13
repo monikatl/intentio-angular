@@ -53,4 +53,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     border-radius: 5px;
 }
 
+.vertical-crest {
+    width: 1px; 
+    height: 100px;
+    background-color: #e0c2c0; 
+    margin: 40px;
+    position: relative;
+}
+
 

@@ -25,11 +25,5 @@ button:hover {
     flex: 1;
 }
 
-.vertical-crest {
-    width: 1px; /* Adjust as needed */
-    height: 100px; /* Adjust as needed */
-    background-color: #e0c2c0; /* Background color */
-    margin: 40px;
-    position: relative;
-  }
+
   

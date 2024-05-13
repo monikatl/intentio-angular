@@ -44,6 +44,14 @@ import { ArchiveIntentionsComponent } from './archive-intentions/archive-intenti
 import { CalendarComponent } from './calendar/calendar.component';
 import { LateComponent } from './late/late.component';
 import { Content4NamesComponent } from './intent-config/content-4-names/content-4-names.component';
+import { ParishEditorComponent } from './parish/parish-editor/parish-editor.component';
+import { ParishElementsComponent } from './parish/parish-elements/parish-elements.component';
+import { PriestsElementsComponent } from './parish/priests-elements/priests-elements.component';
+import { MassesElementsComponent } from './parish/masses-elements/masses-elements.component';
+import { ServicesElementsComponent } from './parish/services-elements/services-elements.component';
+import { SacramentElementsComponent } from './parish/sacrament-elements/sacrament-elements.component';
+import { PlacesElementsComponent } from './parish/places-elements/places-elements.component';
+import { MemorialsElementsComponent } from './parish/memorials-elements/memorials-elements.component';
 
 
 @NgModule({
@@ -74,7 +82,15 @@ import { Content4NamesComponent } from './intent-config/content-4-names/content-
     ArchiveIntentionsComponent,
     CalendarComponent,
     LateComponent,
-    Content4NamesComponent
+    Content4NamesComponent,
+    ParishEditorComponent,
+    ParishElementsComponent,
+    PriestsElementsComponent,
+    MassesElementsComponent,
+    ServicesElementsComponent,
+    SacramentElementsComponent,
+    PlacesElementsComponent,
+    MemorialsElementsComponent
   ],
   imports: [
     BrowserModule,

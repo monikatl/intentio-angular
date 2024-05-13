@@ -1,0 +1,20 @@
+<div class="parish-editor">
+    <div id="menu">
+        <p>MENU</p>
+        <button (click)="navigate('parish-editor/parish-elements')">PARAFIA</button>
+        <button (click)="navigate('parish-editor/priests-elements')">KSIĘŻA</button>
+        <button (click)="navigate('parish-editor/masses-elements')">MSZE ŚWIĘTE</button>
+        <button (click)="navigate('parish-editor/services-elements')">NABOŻEŃSTWA</button>
+        <button (click)="navigate('parish-editor/sacrament-elements')">SAKRAMENTY</button>
+        <button (click)="navigate('parish-editor/memorials-elements')">WYPOMINKI</button>
+        <button (click)="navigate('parish-editor/places-elements')">MIEJSCA</button>
+    </div>
+    <div class="vertical-crest"></div>
+    <div id="elements">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="vertical-crest"></div>
+    <div id="details">
+        <p>DETAILS</p>
+    </div>
+</div>
