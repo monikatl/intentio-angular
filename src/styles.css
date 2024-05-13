@@ -18,7 +18,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     height: 450px;
 }
 
-
 .leave {
     display: flex;
     align-self: self-end;

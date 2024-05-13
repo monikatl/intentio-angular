@@ -7,6 +7,7 @@ import { ContentType } from '../../ContentType';
 import { IntentionConfiguratorState, State } from '../configurator-state';
 import { MatDialog } from '@angular/material/dialog';
 import { EndDialogComponent } from '../../end-dialog/end-dialog.component';
+import { Memorial } from '../../../memorial';
 
 @Component({
   selector: 'app-intent-configurator',
@@ -17,7 +18,7 @@ import { EndDialogComponent } from '../../end-dialog/end-dialog.component';
 export class IntentConfiguratorComponent {
 
   intention: Intention = new Intention();
-  //memorial!: Memorial;
+  memorial!: Memorial;
 
   header: Header = new Header(ContentType.THANKSGIVING, "");
   nextButtonText: string = "DALEJ"
@@ -121,7 +122,7 @@ export class IntentConfiguratorComponent {
 
   openEndDialog(): void {
     const dialogRef = this.dialog.open(EndDialogComponent, {
-      width: '250px',
+      width: '350px',
       data: { intention: this.intention }
     });
 
