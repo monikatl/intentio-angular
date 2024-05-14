@@ -1,4 +1,4 @@
-import { Intention } from "./app/intention";
+import { Intention } from "../intention";
 
 export class IntentionsRepository {
     intentions: Intention[] = []

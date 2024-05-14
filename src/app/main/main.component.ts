@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { MassesRepository } from '../../MassesRepository';
+import { MassesRepository } from '../repositories/MassesRepository';
 
 @Component({
   selector: 'app-main',

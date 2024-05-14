@@ -23,6 +23,11 @@ import { ServicesElementsComponent } from './parish/services-elements/services-e
 import { SacramentElementsComponent } from './parish/sacrament-elements/sacrament-elements.component';
 import { PlacesElementsComponent } from './parish/places-elements/places-elements.component';
 import { MemorialsElementsComponent } from './parish/memorials-elements/memorials-elements.component';
+import { PatronDetailsComponent } from './parish/patron-details/patron-details.component';
+import { AddressDetailsComponent } from './parish/address-details/address-details.component';
+import { AccountDetailsComponent } from './parish/account-details/account-details.component';
+import { ContactDetailsComponent } from './parish/contact-details/contact-details.component';
+import { OfficeDetailsComponent } from './parish/office-details/office-details.component';
 
 
 
@@ -33,7 +38,13 @@ const routes: Routes = [
   { path: 'main', component: MainComponent },
   { path: 'configurator', component: ConfiguratorComponent },
   { path: 'parish-editor', component: ParishEditorComponent, children: [
-    { path: 'parish-elements', component: ParishElementsComponent},
+    { path: 'parish-elements', component: ParishElementsComponent, children: [
+      { path: 'patron-details', component: PatronDetailsComponent, outlet: 'details'},
+      { path: 'address-details', component: AddressDetailsComponent, outlet: 'details'},
+      { path: 'account-details', component: AccountDetailsComponent, outlet: 'details'},
+      { path: 'contact-details', component: ContactDetailsComponent, outlet: 'details'},
+      { path: 'office-details', component: OfficeDetailsComponent, outlet: 'details'}
+    ]},
     { path: 'priests-elements', component: PriestsElementsComponent},
     { path: 'masses-elements', component: MassesElementsComponent},
     { path: 'services-elements', component: ServicesElementsComponent},

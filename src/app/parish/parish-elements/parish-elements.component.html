@@ -1,1 +1,14 @@
-<p>parish-elements works!</p>
+<div class="container">
+  <ul class="list">
+    <li *ngFor="let item of items">
+      <div class="item-header" (click)="toggleItem(item)">
+        {{ item.title }}
+        <i class="fa" [ngClass]="{'fa-chevron-down': !item.expanded, 'fa-chevron-up': item.expanded}"></i>
+      </div>
+      <div class="item-content" *ngIf="item.expanded">
+        {{ item.content }}
+        <button (click)="navigate(item.id)">edytuj</button>
+      </div>
+    </li>
+  </ul>
+</div>

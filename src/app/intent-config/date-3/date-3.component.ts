@@ -3,9 +3,9 @@ import { DataService } from '../../services/data-service';
 import { EventsDataService } from '../../services/events-data-service';
 import { IEvent } from '../../../IEvents';
 import { IntentionPlace } from '../../../IntentionPlace';
-import { MassesRepository } from '../../../MassesRepository';
-import { ServicesRepository } from '../../../ServicesRepository';
-import { MemorialRepository } from '../../../MemorialRepository';
+import { MassesRepository } from '../../repositories/MassesRepository';
+import { ServicesRepository } from '../../repositories/ServicesRepository';
+import { MemorialRepository } from '../../repositories/MemorialRepository';
 
 
 @Component({

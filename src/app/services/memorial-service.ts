@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
 import { Memorial } from "../../memorial";
-import { MemorialRepository } from "../../MemorialRepository";
+import { MemorialRepository } from "../repositories/MemorialRepository";
 
 @Injectable({
     providedIn: 'root'

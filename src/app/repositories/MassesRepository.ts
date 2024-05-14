@@ -1,7 +1,7 @@
-import { IEvent } from "./IEvents";
-import { IEventsRepository } from "./IEventsRepository";
-import { Mass } from "./app/mass";
-import { Hour, Kind, ScheduleMass } from "./app/schedule-mass";
+import { IEvent } from "../../IEvents";
+import { IEventsRepository } from "../../IEventsRepository";
+import { Mass } from "../mass";
+import { Hour, Kind, ScheduleMass } from "../schedule-mass";
 
 export class MassesRepository implements IEventsRepository{
 

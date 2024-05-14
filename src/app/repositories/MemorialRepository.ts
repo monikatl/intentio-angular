@@ -1,8 +1,8 @@
 
-import { IEvent } from "./IEvents";
-import { IEventsRepository } from "./IEventsRepository";
-import { Hour } from "./app/schedule-mass";
-import { Memorial } from "./memorial";
+import { IEvent } from "../../IEvents";
+import { IEventsRepository } from "../../IEventsRepository";
+import { Hour } from "../schedule-mass";
+import { Memorial } from "../../memorial";
 
 export class MemorialRepository implements IEventsRepository {
    

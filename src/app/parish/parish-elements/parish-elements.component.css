@@ -1,0 +1,36 @@
+.container {
+    max-width: 600px;
+    padding: 36px;
+    margin: 0 auto;
+}
+  
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.item-header {
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+  
+.item-header:hover {
+    background-color: #e0e0e0;
+}
+  
+.item-content {
+    padding: 10px;
+}
+  
+.fa {
+    float: right;
+}
+
+button {
+    float: right;
+    border: none;
+    background-color: white;
+    color: #dbb0a0;;
+}

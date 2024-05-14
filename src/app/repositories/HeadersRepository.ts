@@ -1,5 +1,5 @@
-import { Header } from "./Header";
-import { ContentType } from "./app/ContentType";
+import { Header } from "../../Header";
+import { ContentType } from "../ContentType";
 
 export class HeadersRepository {
     headers: Header[] = [

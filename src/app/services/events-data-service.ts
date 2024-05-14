@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { MassesRepository } from "../../MassesRepository";
+import { MassesRepository } from "../repositories/MassesRepository";
 import { BehaviorSubject } from "rxjs";
 import { IEvent } from "../../IEvents";
 import { IEventsRepository } from "../../IEventsRepository";

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Header } from '../../../Header';
-import { HeadersRepository } from '../../../HeadersRepository';
+import { HeadersRepository } from '../../repositories/HeadersRepository';
 import { ContentType } from '../../ContentType';
 import { DataService } from '../../services/data-service';
 
