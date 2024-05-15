@@ -1,5 +1,5 @@
 export enum Function {
-    PARISH_PRIEST,
-    VICAR,
-    GUEST
+    PARISH_PRIEST = "Proboszcz",
+    VICAR = "Wikary",
+    GUEST = "Gość"
 }

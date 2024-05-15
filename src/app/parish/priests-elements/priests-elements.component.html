@@ -1,1 +1,10 @@
-<p>priests-elements works!</p>
+<p>KSIĘŻA</p>
+<ul class="priests">
+    <li *ngFor="let priest of priests$ | async" [class.selected]="priest.id === selectedId">
+      <a [routerLink]="[priest.id]">
+        <span class="badge">{{ priest.priestFunction }}</span>{{ priest.name }}
+      </a>
+    </li>
+</ul>
+  
+<router-outlet></router-outlet>

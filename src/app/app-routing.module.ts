@@ -60,7 +60,7 @@ const routes: Routes = [
     { path: 'content-4-names', component: Content4NamesComponent},
     { path: 'summary-5', component: Summary5Component},
     { path: 'pay-6', component: Pay6Component}
-  ]},
+  ]}
   
 ];
 
