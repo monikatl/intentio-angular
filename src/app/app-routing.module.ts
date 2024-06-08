@@ -32,11 +32,13 @@ import { OfficeDetailsComponent } from './parish/office-details/office-details.c
 
 
 const routes: Routes = [
+
   { path: '', component: StartScreenComponent },
   { path: 'user-login', component: UserLoginComponent },
   { path: 'priest-login', component: PriestLoginComponent },
   { path: 'main', component: MainComponent },
   { path: 'configurator', component: ConfiguratorComponent },
+
   { path: 'parish-editor', component: ParishEditorComponent, children: [
     { path: 'parish-elements', component: ParishElementsComponent, children: [
       { path: 'patron-details', component: PatronDetailsComponent, outlet: 'details'},
@@ -52,6 +54,8 @@ const routes: Routes = [
     { path: 'memorials-elements', component: MemorialsElementsComponent},
     { path: 'places-elements', component: PlacesElementsComponent}
   ]},
+
+  
   { path: 'intent-configurator', component: IntentConfiguratorComponent, children: [
     { path: 'place-1', component: Place1Component},
     { path: 'type-2', component: Type2Component},

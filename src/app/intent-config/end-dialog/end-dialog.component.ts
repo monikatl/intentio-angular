@@ -1,10 +1,10 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { State } from '../intent-config/configurator-state';
-import { DataService } from '../services/data-service';
-import { IntentionServiceService } from '../services/intention-service.service';
-import { Intention } from '../intention';
+import { State } from '../configurator-state';
+import { DataService } from '../../services/data-service';
+import { IntentionServiceService } from '../../services/intention-service.service';
+import { Intention } from '../../intention';
 
 @Component({
   selector: 'app-end-dialog',

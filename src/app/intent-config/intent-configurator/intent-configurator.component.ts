@@ -6,7 +6,7 @@ import { Header } from '../../../Header';
 import { ContentType } from '../../ContentType';
 import { IntentionConfiguratorState, State } from '../configurator-state';
 import { MatDialog } from '@angular/material/dialog';
-import { EndDialogComponent } from '../../end-dialog/end-dialog.component';
+import { EndDialogComponent } from '../end-dialog/end-dialog.component';
 import { Memorial } from '../../../memorial';
 
 @Component({
